@@ -1,17 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HTML_Assignment_4</title>
-  
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Petit+Formal+Script&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/app.css">
+  <title>Driftwood Atlas</title>
 </head>
 <body>
-  <main class="">
-    <h1>HTML_Assignment_4</h1>
-    <p>Bootstrapped by sprout web on 2025-11-05.</p>
-  </main>
-  <script src="app.js" defer></script>
+  <div id="socials">
+    <a href="index.html">
+    <img src="assets/images/shell/DriftwoodAtlasLogo-black.png" alt="logo - home link">
+    </a>
+    <img src="assets/images/shell/youtube-black.png" alt="youtube">
+    <img src="assets/images/shell/insta-black.png" alt="instagram">
+    <img src="assets/images/shell/reddit-black.png" alt="reddit">
+    <img src="assets/images/shell/pinterest-black.png" alt="pinterest">
+  </div>
+  <div id="burgerMenu" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+<nav>
+  <a href="index.html" class="petit-formal-script-regular">home</a>
+  <a href="about.html" class="petit-formal-script-regular">about</a>
+  <a href="gallery.html" class="petit-formal-script-regular">gallery</a>
+  <a href="contact" class="petit-formal-script-regular">contact</a>
+</nav>
+
+<div id="grid">
+  <header>
+    <div id="logo">
+      <img src="assets/images/shell/DriftwoodAtlas_Logo.png" alt="logo">
+    </div>
+  </header>
+  <div id="welcome">
+    <h1 class="charmonman-bold">Welcome to Driftwood Atlas</h1>
+    <p class="petit-formal-script-regular">where we celebrate the raw poetry of nature’s design. Every piece begins with found driftwood — shaped by tide, wind, and time — and is guided, not altered, into its final form. Each creation honors the wood’s natural rhythm: curves left uncut, textures left untouched, stories left intact. The goal isn’t perfection, but harmony — a collaboration between artisan and ocean.</p>
+    <div id="featured">
+      <h2 class="charmonman-bold">Featured Item</h2>
+      <img src="assets/images/gallery/Planter.png" alt="planter pot">
+      <img src="assets/images/gallery/Planter2.png" alt="planter pot 2">
+      <img src="assets/images/gallery/Planter3.png" alt="planter pot 3">
+      <p>Driftwood planters - your plants deserve to make a statement too</p>
+      <h2 class="charmonman-bold">Come Find Us!</h2>
+      <p>Our next vending event will be Nov. 21st at Gaukel Block</p>
+      <img src="assets/images/home/GaukelBlock.jpeg" alt="Gaukel Block">
+    </div>
+  </div>
+
+<footer>
+  <div id="footerLogoBox">
+  <img id="footerLogo" src="assets/images/shell/DriftwoodAtlas_Logo.png" alt="logo"></div>
+    <p>FAQ</p>
+    <p>Testimonials</p>
+    <p>Vending Locations</p>
+    <p>Policies</p>
+    <p>Sitemap</p>
+    <p>Behind the Scenes</p>
+  <div id="copy">&copy; 2025 Driftwood Atlas - all rights reserved</div>
+  <div id="footerSocialsBox">
+  <img id="footerIcon" src="assets/images/shell/youtube-white.png" alt="logo">
+  <img id="footerIcon" src="assets/images/shell/insta-white.png" alt="logo">
+  <img id="footerIcon" src="assets/images/shell/reddit-white.png" alt="logo">
+  <img id="footerIcon" src="assets/images/shell/pinterest-white.png" alt="logo">
+</div>
+    
+
+  </footer>
+<script src="js/jquery.js"></script>
+<script src="js/app.js"></script> 
 </body>
 </html>

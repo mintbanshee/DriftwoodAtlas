@@ -1,8 +1,217 @@
-:root {
-  --ink: #1f2937;
-  --bg: #f8fafc;
-  --accent: #22c55e;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-main { padding: 2rem; }
-h1 { margin-bottom: 0.5rem; }
+:root {
+  --background: #F6EFE7; /* parchment */
+  --accentGlow: #BBA073; /* brass-gold */
+  --textColor: #281e14; /* deep ink-brown */
+  --highlight: #8ab794; /* seafoam */
+  --contrast: #B88A68; /* warm driftwood */
+  --detail: #7A5B3A; /* warm rustic brown */
+  --callToAct: #0486bf; /* coastal turquoise */
+  --hover: #bcafa3; /* brown-gray */
+  --border: #fae5c6; /* sand */
+  --radius: 16px;
+}
+.petit-formal-script-regular {
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.charmonman-regular {
+  font-family: "Charmonman", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.charmonman-bold {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+p {
+  margin: 20px 0;
+}
+#logo {
+  z-index: 7;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+  #logo > img {
+    width: 600px;
+  }
+#socials {
+  position: absolute;
+  z-index: 7;
+  top: 125px;
+  left: 30px;
+  width: 120px;
+  text-align: center;
+}
+  #socials > a img {
+    width: 80px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+  }
+#burgerMenu {
+  position: fixed;
+  z-index: 13;
+  width: 75px;
+  height: 60px;
+  top: 50px;
+  right: 45px;
+  margin: 15px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+  #burgerMenu:hover {
+    opacity: 1;
+  }
+  .bar {
+    width: 80px;
+    height: 16px;
+    margin: 4px 0;
+    background: #000;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+nav {
+  position: fixed;
+  z-index: 7;
+  width: 225px;
+  background: var(--textColor);
+  opacity: 0.8;
+  height: 100vh;
+  right: -350px;
+  text-align: right;
+  padding-top: 145px;
+  padding-right: 35px;
+  border-left: 1px solid var(--callToAct);
+}
+  nav > a {
+    display: block;
+    font-size: 1.6em;
+    color: var(--background);
+    text-decoration: none;
+    opacity: 0.8;
+    margin: 5px;
+  }
+  nav > a:hover {
+    color: var(--callToAct);
+    opacity: 1;
+  }
+body {
+  width: 100%;
+  background: #333;
+  font-size: 1.6em;
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: minmax(150px, auto);
+  grid-template-areas: 
+    "hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr hdr"
+    "wel wel wel wel wel wel wel wel wel wel wel wel"
+    "abt abt abt abt abt abt abt abt abt abt abt abt"
+    "gal gal gal gal gal gal gal gal gal gal gal gal"
+    "cnt cnt cnt cnt cnt cnt cnt cnt cnt cnt cnt cnt"
+    "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+}
+header {
+  grid-area: hdr;
+  height: 500px;
+  background: url('../assets/images/shell/HeaderLightBG.png');
+  border-bottom: 1px solid #fff;
+  background-repeat: none;
+  background-size: cover;
+}
+#welcome {
+  display: grid;
+  grid-area: wel;
+  height: auto;
+  background: url('../assets/images/home/homeBG.png');
+  text-align: center;
+  padding-top: 50px;
+  font-size: 1.6em;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+}
+  #welcome p {
+    font-weight: 500;
+    margin: 10px 100px;
+  }
+  #welcome h1 {
+    color: var(--callToAct);
+    text-shadow: 2px 2px 5px var(--textColor);
+  }
+  #welcome p {
+    color: var(--textColor);
+    line-height: 1.5;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px var(--background);
+  }
+#featured {
+  margin-top: 35px;
+  justify-content: center;
+}
+  #featured img {
+    width: 250px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin: 10px;
+    margin-bottom: 40px;
+  }
+  #featured h2 {
+    color: var(--callToAct);
+    text-shadow: 1px 1px 2px var(--textColor);
+    margin-top: 40px;
+  }
+
+
+  footer {
+    display: grid;
+    grid-area: ftr;
+    height: 200px;
+    background: url(../assets/images/shell/HeaderDarkBG.png);
+    background-position: center 40%;
+    text-align: center;
+    padding: 25px;
+    color: var(--background);
+    font-size: 0.8em;
+    position: relative
+  }
+  #footerLogoBox {
+    position: absolute;
+    justify-content: left;
+    align-content: left;
+    width: 300px;
+  }
+    #footerLogo {
+      width: 200px;
+    }
+    footer > p {
+      padding: 0;
+      margin: 0;
+      font-size: 0.8em;
+    }
+    footer > p:hover {
+      text-decoration: underline;
+    }
+    #copy {
+      padding-top: 25px;
+      font-size: 1em;
+      color: var(--background);
+    }
+  #footerSocialsBox {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+    #footerIcon {
+      padding: 5px;
+    }
